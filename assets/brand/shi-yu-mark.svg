@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+  <title id="title">试玉标志</title>
+  <desc id="desc">一枚在朱砂火光中接受检验的青玉玉璧</desc>
+  <defs>
+    <linearGradient id="jade" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#A8E0D2"/>
+      <stop offset="0.48" stop-color="#4FA88F"/>
+      <stop offset="1" stop-color="#176B5A"/>
+    </linearGradient>
+    <linearGradient id="ember" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#A83E2E"/>
+      <stop offset="1" stop-color="#F09A63"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="22" stdDeviation="24" flood-color="#07130F" flood-opacity="0.42"/>
+    </filter>
+  </defs>
+  <rect x="48" y="48" width="928" height="928" rx="224" fill="#101916"/>
+  <path d="M512 182c182 0 330 148 330 330S694 842 512 842 182 694 182 512 330 182 512 182Zm0 152c-98 0-178 80-178 178s80 178 178 178 178-80 178-178-80-178-178-178Z"
+        fill="#58AE95" fill-rule="evenodd" filter="url(#shadow)"/>
+  <path d="M330 512h364" stroke="#DDF4EC" stroke-width="28" stroke-linecap="round" opacity="0.88"/>
+  <path d="M512 334v356" stroke="#DDF4EC" stroke-width="28" stroke-linecap="round" opacity="0.88"/>
+  <path d="M706 770c-54-42-74-92-57-151 17 28 38 39 62 31-10-49 5-98 46-148 71 76 97 145 78 208-16 54-60 90-129 107 24-16 39-36 45-60 7-28-1-52-23-74-4 37-23 66-57 87h35Z"
+        fill="#D96B47"/>
+  <circle cx="512" cy="512" r="330" fill="none" stroke="#E7D7B3" stroke-width="10" opacity="0.34"/>
+</svg>

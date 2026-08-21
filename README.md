@@ -6,6 +6,14 @@
 
 输入岗位描述（JD）和候选人信息，按技能、经验、行为特征、业务影响四维拆解与排序，评估匹配程度，并生成关键提问、工作样本和分轮面试流程。覆盖商务、业务、研究、开发、产品、数据、设计、管理、质量合规、制造实验等岗位族。
 
+![试玉标志](assets/brand/shi-yu-mark.png)
+
+## 名称与视觉 / Name & Identity
+
+“试玉”取自白居易《放言五首·其三》。“玉璧”代表待识别的真实能力，“火”代表有限时间内施加的工作样本与验证问题，“十字刻度”代表结构化、可复核的评价标准。
+
+视觉系统采用墨黑、青玉和朱砂三色：墨黑保持判断的克制，青玉突出人才价值，朱砂只用于标记验证与关键证据。
+
 Shi Yu is an interviewer-side Agent Skill for hiring managers and recruiting teams. It is not a candidate interview-preparation or answer-generation tool. It breaks down a resume into four ranked dimensions, evaluates fit against a job description, and generates evidence-based questions, work samples, and a staged interview process.
 
 遵循 [Agent Skills 开放标准](https://agentskills.io)，兼容 Claude Code、Cursor、GitHub Copilot、Codex、Windsurf、Gemini CLI、Perplexity Computer 等 30+ AI Agent 平台。
@@ -93,6 +101,13 @@ JD 是算法负责人，候选人是 5 年 AI 制药计算科学家，侧重研�
 ```
 shi-yu/
 ├── SKILL.md                          # 技能入口（Agent 自动读取）
+├── assets/
+│   └── brand/
+│       ├── shi-yu-mark.svg           # 矢量标志
+│       ├── shi-yu-mark.png           # GitHub/README 标志
+│       ├── shi-yu-mark-128.png       # 小尺寸图标
+│       ├── social-preview.svg        # 可编辑社交预览源文件
+│       └── social-preview.png        # GitHub 社交预览图
 ├── references/
 │   ├── resume-breakdown-framework.md # 四维拆解框架与排序规则
 │   ├── behavioral-traits.md          # 行为证据链、STAR-L 与验证题库

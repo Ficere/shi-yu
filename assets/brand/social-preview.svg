@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 640" role="img" aria-labelledby="title desc">
+  <title id="title">试玉 GitHub 社交预览图</title>
+  <desc id="desc">面向面试官的结构化候选人评估 Agent Skill</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0D1512"/>
+      <stop offset="0.62" stop-color="#15251F"/>
+      <stop offset="1" stop-color="#1B322A"/>
+    </linearGradient>
+    <linearGradient id="jade" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#B5E8DB"/>
+      <stop offset="0.5" stop-color="#58AE95"/>
+      <stop offset="1" stop-color="#1B6F5D"/>
+    </linearGradient>
+    <linearGradient id="ember" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#A83E2E"/>
+      <stop offset="1" stop-color="#F1A06A"/>
+    </linearGradient>
+    <filter id="shadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#000" flood-opacity="0.38"/>
+    </filter>
+  </defs>
+  <rect width="1280" height="640" fill="url(#bg)"/>
+  <path d="M0 516C202 445 345 467 527 527c184 61 359 41 753-89v202H0Z" fill="#213B32" opacity="0.55"/>
+  <path d="M0 552c205-56 373-28 543 28 181 59 362 41 737-77v137H0Z" fill="#2D4B40" opacity="0.36"/>
+
+  <g transform="translate(104 112)" filter="url(#shadow)">
+    <rect width="416" height="416" rx="104" fill="#101916" stroke="#34594C" stroke-width="2"/>
+    <path d="M208 58c83 0 150 67 150 150s-67 150-150 150S58 291 58 208 125 58 208 58Zm0 69c-45 0-81 36-81 81s36 81 81 81 81-36 81-81-36-81-81-81Z"
+          fill="#58AE95" fill-rule="evenodd"/>
+    <path d="M125 208h166M208 127v162" stroke="#DDF4EC" stroke-width="13" stroke-linecap="round" opacity="0.9"/>
+    <path d="M295 326c-25-19-34-42-26-69 8 13 17 18 28 14-5-22 2-45 21-67 32 34 44 66 35 94-7 25-27 41-58 49 11-7 18-17 20-27 3-13 0-24-10-34-2 17-11 30-26 40h16Z"
+          fill="#D96B47"/>
+  </g>
+
+  <text x="604" y="180" fill="#EADDBE" font-family="'Noto Serif CJK SC','Noto Serif CJK JP',serif" font-size="25" letter-spacing="4">FOR INTERVIEWERS</text>
+  <text x="592" y="326" fill="#F4F0E7" font-family="'Noto Serif CJK SC','Noto Serif CJK JP',serif" font-size="136" font-weight="700">试玉</text>
+  <text x="604" y="388" fill="#AFC3BA" font-family="'Noto Sans CJK SC','Noto Sans CJK JP',sans-serif" font-size="31">在有限时间内，用结构化证据试玉辨材</text>
+  <line x1="604" y1="430" x2="1130" y2="430" stroke="#4F7E6E" stroke-width="2"/>
+  <text x="604" y="478" fill="#EADDBE" font-family="'Noto Serif CJK SC','Noto Serif CJK JP',serif" font-size="24">“试玉要烧三日满，辨材须待七年期。”</text>
+  <text x="604" y="526" fill="#819990" font-family="'Noto Sans CJK SC','Noto Sans CJK JP',sans-serif" font-size="22">简历拆解 · 匹配评估 · 行为验证 · 面试流程 · Coding 选题</text>
+  <circle cx="1166" cy="92" r="5" fill="#D37754"/>
+  <circle cx="1190" cy="92" r="5" fill="#5F9E89"/>
+</svg>
