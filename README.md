@@ -1,8 +1,8 @@
 # 🎯 候选人面试准备 / Candidate Interview Prep
 
-拆解候选人简历并按技能、经验、行为特征、业务影响四维排序，结合岗位描述（JD）评估匹配程度，生成面试关键提问与分轮面试流程。支持商务、业务、研究、开发等面试类型，可按需定制（如 coding 能力时从 LeetCode 选取匹配题目）。
+拆解候选人简历并按技能、经验、行为特征、业务影响四维排序，结合岗位描述（JD）评估匹配程度，生成面试关键提问与分轮面试流程。覆盖商务、业务、研究、开发、产品、数据、设计、管理、质量合规、制造实验等岗位族，并提供证据化行为验证与岗位相关的 coding 选题。
 
-An Agent Skill that breaks down a candidate's resume into four ranked dimensions (skills, experience, behavioral traits, business impact), evaluates fit against a job description, and generates key interview questions plus a staged interview process — supporting business, operations, research, and development interview types, with optional coding-question sourcing from LeetCode.
+An Agent Skill that breaks down a candidate's resume into four ranked dimensions, evaluates fit against a job description, and generates evidence-based behavioral questions plus a staged interview process. It supports 10+ role families and job-relevant coding assessments sourced from LeetCode and HackerRank.
 
 遵循 [Agent Skills 开放标准](https://agentskills.io)，兼容 Claude Code、Cursor、GitHub Copilot、Codex、Windsurf、Gemini CLI、Perplexity Computer 等 30+ AI Agent 平台。
 
@@ -66,8 +66,9 @@ JD 是算法负责人，候选人是 5 年 AI 制药计算科学家，侧重研�
 | **匹配评估** | 对照 JD 逐条评估，给出整体匹配度、优势、缺口、风险点 |
 | **关键提问** | 按维度生成 STAR 行为面试提问，标注考察目的与红旗信号 |
 | **面试流程** | 输出分轮流程（目标、面试官、时长、考察点、通过标准） |
-| **面试类型** | 商务 / 业务 / 研究 / 开发四类，自动匹配评估维度 |
-| **coding 定制** | 从 LeetCode 等来源选取匹配岗位与候选人特点的算法题 |
+| **面试类型** | 覆盖 10+ 岗位族，支持按主要/次要岗位族组合权重 |
+| **行为验证** | 行为假设、替代解释、STAR-L 与反证追问，避免人格标签 |
+| **coding 定制** | 六维选题矩阵、岗位任务映射、多种面试形式、统一评分量表 |
 
 <details>
 <summary>四维拆解细则 / Breakdown dimensions</summary>
@@ -90,10 +91,11 @@ candidate-interview-prep/
 ├── SKILL.md                          # 技能入口（Agent 自动读取）
 ├── references/
 │   ├── resume-breakdown-framework.md # 四维拆解框架与排序规则
-│   ├── interview-types.md            # 商务/业务/研究/开发类型指南
-│   ├── coding-interview.md           # coding 题选取策略（LeetCode）
+│   ├── behavioral-traits.md          # 行为证据链、STAR-L 与验证题库
+│   ├── interview-types.md            # 10+ 岗位族面试指南
+│   ├── coding-interview.md           # coding 选题矩阵、形式与评分量表
 │   ├── output-template.md            # 输出模板
-│   └── examples.md                   # 四类场景示例
+│   └── examples.md                   # 14 个跨岗位场景示例
 ├── LICENSE
 └── README.md
 ```
