@@ -1,15 +1,19 @@
-# 🎯 候选人面试准备 / Candidate Interview Prep
+# 试玉 / Shi Yu
 
-拆解候选人简历并按技能、经验、行为特征、业务影响四维排序，结合岗位描述（JD）评估匹配程度，生成面试关键提问与分轮面试流程。覆盖商务、业务、研究、开发、产品、数据、设计、管理、质量合规、制造实验等岗位族，并提供证据化行为验证与岗位相关的 coding 选题。
+> “试玉要烧三日满，辨材须待七年期。”——白居易
 
-An Agent Skill that breaks down a candidate's resume into four ranked dimensions, evaluates fit against a job description, and generates evidence-based behavioral questions plus a staged interview process. It supports 10+ role families and job-relevant coding assessments sourced from LeetCode and HackerRank.
+面试是在有限时间内试玉辨材。**试玉是一项专门给面试官、招聘负责人和用人经理使用的候选人评估 Agent Skill，不是给候选人刷题或生成应试答案的工具。**
+
+输入岗位描述（JD）和候选人信息，按技能、经验、行为特征、业务影响四维拆解与排序，评估匹配程度，并生成关键提问、工作样本和分轮面试流程。覆盖商务、业务、研究、开发、产品、数据、设计、管理、质量合规、制造实验等岗位族。
+
+Shi Yu is an interviewer-side Agent Skill for hiring managers and recruiting teams. It is not a candidate interview-preparation or answer-generation tool. It breaks down a resume into four ranked dimensions, evaluates fit against a job description, and generates evidence-based questions, work samples, and a staged interview process.
 
 遵循 [Agent Skills 开放标准](https://agentskills.io)，兼容 Claude Code、Cursor、GitHub Copilot、Codex、Windsurf、Gemini CLI、Perplexity Computer 等 30+ AI Agent 平台。
 
 ## 安装 / Install
 
 ```bash
-npx skills add Ficere/candidate-interview-prep
+npx skills add Ficere/shi-yu
 ```
 
 > 需要 Node.js。安装后 Agent 会自动发现并按需加载该技能。
@@ -22,7 +26,7 @@ npx skills add Ficere/candidate-interview-prep
 **手动安装 / Manual install：**
 
 ```bash
-git clone https://github.com/Ficere/candidate-interview-prep.git
+git clone https://github.com/Ficere/shi-yu.git
 # 将整个目录复制到你的 Agent 的 skills 目录下即可
 # Copy the directory to your agent's skills folder:
 #   Claude Code:  ~/.claude/skills/
@@ -40,7 +44,7 @@ git clone https://github.com/Ficere/candidate-interview-prep.git
 
 ## 使用 / Usage
 
-安装后直接用自然语言触发，需提供岗位描述（JD）与候选人信息，可选提供面试类型与要求：
+安装后由面试官直接用自然语言触发，需提供岗位描述（JD）与候选人信息，可选提供面试类型与要求：
 
 ```
 这是岗位描述：<JD>。这是候选人简历：<简历>。帮我拆解简历并评估匹配度，给出面试提问和流程。
@@ -87,7 +91,7 @@ JD 是算法负责人，候选人是 5 年 AI 制药计算科学家，侧重研�
 ## 目录结构 / Structure
 
 ```
-candidate-interview-prep/
+shi-yu/
 ├── SKILL.md                          # 技能入口（Agent 自动读取）
 ├── references/
 │   ├── resume-breakdown-framework.md # 四维拆解框架与排序规则
