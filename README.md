@@ -4,7 +4,7 @@
 
 面试是在有限时间内试玉辨材。**试玉是一项专门给面试官、招聘负责人和用人经理使用的候选人评估 Agent Skill，不是给候选人刷题或生成应试答案的工具。**
 
-输入岗位描述（JD）和候选人信息，按技能、经验、行为特征、业务影响四维拆解与排序，评估匹配程度，并生成关键提问、工作样本和分轮面试流程。覆盖商务、业务、研究、开发、产品、数据、设计、管理、质量合规、制造实验等岗位族。
+输入岗位描述（JD）和候选人信息，沿 JD 关键要求逐条对照证据，给出简明匹配结论，并生成温和中性的验证问题、工作样本和分轮面试流程。默认按初级面试官设计，兼顾候选人情绪与面试体验。
 
 ## 名称与视觉 / Name & Identity
 
@@ -12,7 +12,7 @@
 
 视觉系统采用墨黑、青玉和朱砂三色：墨黑保持判断的克制，青玉突出人才价值，朱砂只用于标记验证与关键证据。
 
-Shi Yu is an interviewer-side Agent Skill for hiring managers and recruiting teams. It is not a candidate interview-preparation or answer-generation tool. It breaks down a resume into four ranked dimensions, evaluates fit against a job description, and generates evidence-based questions, work samples, and a staged interview process.
+Shi Yu is an interviewer-side Agent Skill for hiring managers and recruiting teams. It is not a candidate interview-preparation or answer-generation tool. It compares candidate evidence directly against the job description and generates concise, candidate-aware questions, work samples, and a staged interview process.
 
 遵循 [Agent Skills 开放标准](https://agentskills.io)，兼容 Claude Code、Cursor、GitHub Copilot、Codex、Windsurf、Gemini CLI、Perplexity Computer 等 30+ AI Agent 平台。
 
@@ -53,7 +53,7 @@ git clone https://github.com/Ficere/shi-yu.git
 安装后由面试官直接用自然语言触发，需提供岗位描述（JD）与候选人信息，可选提供面试类型与要求：
 
 ```
-这是岗位描述：<JD>。这是候选人简历：<简历>。帮我拆解简历并评估匹配度，给出面试提问和流程。
+这是岗位描述：<JD>。这是候选人简历：<简历>。请按 JD 逐条对照，给出简明结论、面试问题和流程。面试官经验较少。
 ```
 
 ```
@@ -72,25 +72,23 @@ JD 是算法负责人，候选人是 5 年 AI 制药计算科学家，侧重研�
 
 | 模块 | 说明 |
 |------|------|
-| **四维拆解** | 技能、经验、行为特征、业务影响分别列出并排序，标注证据等级 |
-| **匹配评估** | 对照 JD 逐条评估，给出整体匹配度、优势、缺口、风险点 |
-| **关键提问** | 按维度生成 STAR 行为面试提问，标注考察目的与红旗信号 |
+| **JD 逐条对照** | 提取 5-8 条关键要求，直接对照简历证据，不重复分类 |
+| **简明结论** | 先给是否建议进入下一轮，再列最多 3 个优势与待确认点 |
+| **安全提问** | 默认 3-5 个中性问题，每题一个追问和初级面试官收口话术 |
 | **面试流程** | 输出分轮流程（目标、面试官、时长、考察点、通过标准） |
 | **面试类型** | 覆盖 10+ 岗位族，支持按主要/次要岗位族组合权重 |
-| **行为验证** | 行为假设、替代解释、STAR-L 与反证追问，避免人格标签 |
-| **coding 定制** | 六维选题矩阵、岗位任务映射、多种面试形式、统一评分量表 |
+| **候选人体验** | 识别紧张与防御信号，提供降压、澄清和停止追问建议 |
+| **行为验证** | 基于具体经历的 STAR-L 证据，不做人格标签或诚信预判 |
+| **coding 定制** | 真实任务映射、标准提示路径和统一评分量表，避免临场施压 |
 
 <details>
-<summary>四维拆解细则 / Breakdown dimensions</summary>
+<summary>JD 对照规则 / JD comparison rules</summary>
 
-| 维度 | 拆解内容 | 排序依据 |
-|------|----------|----------|
-| 技能 Skills | 硬技能、软技能、工具、领域知识、语言 | 与 JD 相关性 + 熟练度证据强度 |
-| 经验 Experience | 项目、年限、行业、规模、复杂度、角色 | 与 JD 相关度 + 深度 + 时间远近 |
-| 行为特征 Behavioral traits | 工作风格、价值观、协作模式、动机 | 证据强度 + 与岗位文化匹配度 |
-| 业务影响 Business impact | 量化成果、可衡量贡献、ROI | 量化程度 + 与岗位目标相关性 |
+| JD 关键要求 | 简历证据 | 匹配判断 | 待确认点 |
+|-------------|----------|----------|----------|
+| Must-have 或关键产出 | 只摘录最相关事实 | 匹配 / 部分匹配 / 证据不足 / 不匹配 | 面试中确认的一件事 |
 
-每项标注证据等级：`[陈述]` 简历明确写出、`[推断]` 合理推断、`[缺失]` 材料未覆盖。
+技能、经验、行为与业务影响只作为内部完整性检查，不默认重复输出。简历未写明时使用“证据不足 / 待确认”，不直接定性为“缺失”“夸大”或“红旗”。
 
 </details>
 
@@ -107,12 +105,13 @@ shi-yu/
 │       ├── social-preview.svg        # 可编辑社交预览源文件
 │       └── social-preview.png        # GitHub 社交预览图
 ├── references/
-│   ├── resume-breakdown-framework.md # 四维拆解框架与排序规则
+│   ├── resume-breakdown-framework.md # JD 逐条对照与证据规则
 │   ├── behavioral-traits.md          # 行为证据链、STAR-L 与验证题库
+│   ├── interviewer-safety.md         # 初级面试官安全问法与收场脚本
 │   ├── interview-types.md            # 10+ 岗位族面试指南
 │   ├── coding-interview.md           # coding 选题矩阵、形式与评分量表
 │   ├── output-template.md            # 输出模板
-│   └── examples.md                   # 14 个跨岗位场景示例
+│   └── examples.md                   # 15 个跨岗位场景示例
 ├── LICENSE
 └── README.md
 ```
