@@ -6,8 +6,6 @@
 
 输入岗位描述（JD）和候选人信息，沿 JD 关键要求逐条对照证据，给出简明匹配结论，并生成温和中性的验证问题、工作样本和分轮面试流程。默认按初级面试官设计，兼顾候选人情绪与面试体验。
 
-“试玉”取自白居易《放言五首·其三》。“玉璧”代表待识别的真实能力，“火”代表有限时间内施加的工作样本与验证问题，“十字刻度”代表结构化、可复核的评价标准。
-
 Shi Yu is an interviewer-side Agent Skill for hiring managers and recruiting teams. It is not a candidate interview-preparation or answer-generation tool. It compares candidate evidence directly against the job description and generates concise, candidate-aware questions, work samples, and a staged interview process.
 
 遵循 [Agent Skills 开放标准](https://agentskills.io)，兼容 Claude Code、Cursor、GitHub Copilot、Codex、Windsurf、Gemini CLI、Perplexity Computer 等 30+ AI Agent 平台。
